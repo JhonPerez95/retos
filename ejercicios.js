@@ -40,23 +40,42 @@ const repeted = (str) => {
   const lowered = str.toLowerCase();
   const splited = lowered.split(" ");
   // forma 1
-//   const resed = splited.reduce((acc, el) => {
-//     if (acc[el]) {
-//       acc[el]++;
-//     } else {
-//       acc[el] = 1;
-//     }
-//     return acc;
-//   }, {});
-//   return Object.entries(resed).reduce((acc,el)=> acc[1] > el[1]? acc : el)
+  //   const resed = splited.reduce((acc, el) => {
+  //     if (acc[el]) {
+  //       acc[el]++;
+  //     } else {
+  //       acc[el] = 1;
+  //     }
+  //     return acc;
+  //   }, {});
+  //   return Object.entries(resed).reduce((acc,el)=> acc[1] > el[1]? acc : el)
 
   // Forma 2
-  const repetedObject ={};
-  splited.forEach(element => {
-      repetedObject[element] = repetedObject[element] ? repetedObject[element] + 1 : 1;
-  },{});
-  console.log(repetedObject)
-  return Object.entries(repetedObject).reduce((acc,el)=>acc[1] > el[1] ? acc : el)
+  const repetedObject = {};
+  splited.forEach((element) => {
+    repetedObject[element] = repetedObject[element]
+      ? repetedObject[element] + 1
+      : 1;
+  }, {});
+  // console.log(repetedObject)
+  return Object.entries(repetedObject).reduce((acc, el) =>
+    acc[1] > el[1] ? acc : el
+  );
 };
 const e = repeted("una prueba de palabra  repetidas a a a a A a A");
-console.log(e)
+// console.log(e)
+
+const arrNum = [1, 2, 2, 3, 3, 3, 4, 5, 6, 7, 8, 9];
+console.log("****************************");
+// const repetedNum = arrNum.reduce((acc, el) => {
+//    console.log('acc: '+acc+ ' el: '+el)
+//   if (acc.include) {
+
+//   }
+
+// })
+const elem = arrNum.filter((item, i) => item == arrNum[i + 1]);
+elem[0];
+
+console.log(elem[0]);
+console.log("****************************");
