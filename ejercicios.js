@@ -65,7 +65,16 @@ const repeted = (str) => {
 const e = repeted("una prueba de palabra  repetidas a a a a A a A");
 // console.log(e)
 
-const arrNum = [1, 2, 2, 3, 3, 3, 4, 5, 6, 7, 8, 9];
+const arrNum = [1, 2, 2, 3, 3, 3, 4, 5, 6, 7,1, 8, 9];
+const searchFirstNumber = (arr)=>{
+  const obj = {}
+  arr.map((item)=>{
+    obj[item] = obj[item] ? obj[item]+1 : 1
+  })
+  const arrObj = parseInt(Object.keys(obj).map(item =>(obj[item]>1 && item ))[0])
+  console.log(arrObj)
+}
+searchFirstNumber(arrNum)
 console.log("****************************");
 // const repetedNum = arrNum.reduce((acc, el) => {
 //    console.log('acc: '+acc+ ' el: '+el)

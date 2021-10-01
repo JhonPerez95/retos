@@ -17,12 +17,13 @@ console.log(response)
 
 const objeto = {
     a: 'jhon',
-    b: 'Mafe'
+    b: 'Mafe',
+    c: 'Angie'
 }
 
 const arrObjt = Object.values(objeto)
 
-console.log(arrObjt)
+// console.log(arrObjt)
 
 
 // ejercicio que convierte la primera palabra de cada frase en MAYUSCULA
